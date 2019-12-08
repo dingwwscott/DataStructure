@@ -10,7 +10,6 @@ public class SpareArray {
         //输出原始二维数组
         for (int[] row : chessArr1 ){
             for (int data : row){
-
                 System.out.printf("%d\t",data);
             }
             System.out.println();
