@@ -15,7 +15,6 @@ public class SpareArray {
             System.out.println();
         }
 
-
         //遍历原始数组不为0的个数
         int sum = 0;
         for (int i=0;i<11;i++){
@@ -25,7 +24,7 @@ public class SpareArray {
                 }
             }
         }
-        System.out.println("sum3 : "+sum);
+        System.out.println("sum : "+sum);
 
     }
 }
