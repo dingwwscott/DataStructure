@@ -15,6 +15,7 @@ class ArrayQueue{
 
     //创建队列的构造器
     public ArrayQueue(int arrMaxSize){
+
         maxSize = arrMaxSize;
         arr = new int[arrMaxSize];
         front = -1;  //指向队列头部，分析出front是指向队列头的前面一个位置
