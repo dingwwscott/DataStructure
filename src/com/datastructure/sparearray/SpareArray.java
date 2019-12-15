@@ -1,4 +1,4 @@
-package com.panda.sparearray;
+package com.datastructure.sparearray;
 
 public class SpareArray {
     public static void main(String[] args) {
