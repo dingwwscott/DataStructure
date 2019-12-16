@@ -38,8 +38,35 @@ class ArrayQueue{
             System.out.println("队列已满");
             return;
         }
-        rear++;
+        rear++;  //让rear后移
         arr[rear] = number;
+    }
+
+    //获取队列的数据，出队列
+    public int getQueue(){
+        if(isEmpty()){
+            throw new RuntimeException("队列空，不能取数据");
+        }
+        front++;
+        return arr[front];
+    }
+
+    //显示队列的所有数据
+    public void showQueue(){
+        if(isEmpty()){
+            throw new RuntimeException("队列空，没有数据");
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.printf("arr[%d]=%d\n",i,arr[i]);
+        }
+    }
+
+    //显示队列的头数据，注意不是取出数据
+    public int headQueue(){
+        if(isEmpty()){
+            throw new RuntimeException("队列空，没有数据");
+        }
+        return arr[front + 1];
     }
 
 }
