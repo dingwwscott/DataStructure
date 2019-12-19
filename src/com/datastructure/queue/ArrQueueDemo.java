@@ -2,7 +2,7 @@ package com.datastructure.queue;
 
 public class ArrQueueDemo {
     public static void main(String[] args) {
-
+        ArrayQueue arrayQueue = new ArrayQueue(3);
     }
 }
 
