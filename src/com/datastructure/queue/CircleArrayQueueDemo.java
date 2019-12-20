@@ -10,14 +10,14 @@ public class CircleArrayQueueDemo {
         char key = ' ';                                                  //接收用户输入
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
-        while (loop){
+        while (loop) {
             System.out.println("s(show):显示队列");
             System.out.println("e(exit):退出程序");
             System.out.println("a(add) :添加数据到队列");
             System.out.println("g(get) :从队列取出数据");
             System.out.println("h(head):查看队列的头数据");
             key = scanner.next().charAt(0);                              //接收一个字符
-            switch (key){
+            switch (key) {
                 case 's':
                     try {
                         circleArray.showQueue();
