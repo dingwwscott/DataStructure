@@ -38,6 +38,24 @@ public class SingleLinkedListDemo {
         System.out.println("删除后的链表");
         singleLinkedList.list();
     }
+
+    /**
+     * 获取单链表的节点的个数（如果是带头结点的链表，需求不许统计头节点）
+     * @param heroNode 链表的头结点
+     * @return 返回的就是有效节点的个数
+     */
+    public static int getLength(HeroNode heroNode){
+        if (heroNode.next == null){                          //空链表
+            return 0;
+        }
+        int length = 0;
+        HeroNode temp = heroNode.next;
+        while (temp != null){
+            length ++;
+            temp = temp.next;
+        }
+        return length;
+    }
 }
 
 class SingleLinkedList {
