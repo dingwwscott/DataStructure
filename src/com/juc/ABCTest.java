@@ -23,8 +23,7 @@ public class ABCTest {
                     tc.loopB();
                 }
             }
-        },"" +
-                "B").start();
+        }, "B").start();
 
         new Thread(new Runnable() {
             @Override
@@ -47,6 +46,7 @@ class ThreadCommunication{
     public void loopA(){
         lock.lock();
         try {
+            //1.判断
             if (number != 1){
                 try {
                     condition1.await();
@@ -54,7 +54,9 @@ class ThreadCommunication{
                     e.printStackTrace();
                 }
             }
+            //2.打印
             System.out.print(Thread.currentThread().getName());
+            //3.唤醒
             number=2;
             condition2.signal();
         }finally {
@@ -65,6 +67,7 @@ class ThreadCommunication{
     public void loopB(){
         lock.lock();
         try {
+            //1.判断
             if (number != 2){
                 try {
                     condition2.await();
@@ -72,7 +75,9 @@ class ThreadCommunication{
                     e.printStackTrace();
                 }
             }
+            //2.打印
             System.out.print(Thread.currentThread().getName());
+            //3.唤醒
             number=3;
             condition3.signal();
         }finally {
@@ -83,6 +88,7 @@ class ThreadCommunication{
     public void loopC(){
         lock.lock();
         try {
+            //1.判断
             if (number != 3){
                 try {
                     condition3.await();
@@ -90,7 +96,9 @@ class ThreadCommunication{
                     e.printStackTrace();
                 }
             }
+            //2.打印
             System.out.print(Thread.currentThread().getName());
+            //3.唤醒
             number=1;
             condition1.signal();
         }finally {
