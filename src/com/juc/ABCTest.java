@@ -47,7 +47,7 @@ class ThreadCommunication{
         lock.lock();
         try {
             //1.判断
-            if (number != 1){
+            while (number != 1){
                 try {
                     condition1.await();
                 } catch (InterruptedException e) {
@@ -68,7 +68,7 @@ class ThreadCommunication{
         lock.lock();
         try {
             //1.判断
-            if (number != 2){
+            while (number != 2){
                 try {
                     condition2.await();
                 } catch (InterruptedException e) {
@@ -89,7 +89,7 @@ class ThreadCommunication{
         lock.lock();
         try {
             //1.判断
-            if (number != 3){
+            while (number != 3){
                 try {
                     condition3.await();
                 } catch (InterruptedException e) {
