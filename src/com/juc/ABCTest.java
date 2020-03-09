@@ -7,7 +7,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ABCTest {
     public static void main(String[] args) {
         ThreadCommunication tc = new ThreadCommunication();
-        new Thread(new Runnable() {
+        new Thread(() -> { for (int i = 1;i<=10;i++) tc.loopA(); },"A").start();
+        new Thread(() -> { for (int i = 1;i<=10;i++) tc.loopB(); },"B").start();
+        new Thread(() -> { for (int i = 1;i<=10;i++) tc.loopC(); },"C").start();
+
+       /* new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 1;i<11;i++){
@@ -32,7 +36,7 @@ public class ABCTest {
                     tc.loopC();
                 }
             }
-        },"C").start();
+        },"C").start();*/
     }
 }
 
